@@ -1,3 +1,30 @@
+/*
+
+This is a simple game that utilizes a TM1638 "Led&Key" module.
+
+Setup:
+Connect VCC pin to 3.3v pin
+Connect GND pin to GND pin
+Connect STB pin to D7 pin
+Connect CLK pin to D9 pin
+Connect DIO pin to D8 pin
+
+Connect arduino's RST pin to D4 pin. (you need to do this after uploading the sketch, otherwise there will be an error during uploading).
+
+When turned on, press the S1 button to start the game.
+
+The controls are:
+press the S1 button to go up
+press the S8 button to go down.
+
+The goal is to dodge the squares and score as many points as you can. The squares' speed will increase after a certain amount of points.
+Your score is displayed in binary during the game and shown after the "GAME OVER" message.
+
+The game will restart itself if arduino's RST pin connected to D4 pin. If not, you will need to either connect them or reset the arduino.
+
+*/
+
+
 #define UPPER_MINUS 11
 #define LOWER_MINUS 10
 #define CLEAR 12
@@ -510,8 +537,7 @@ void loop() {
   for(uint8_t position = 0; position < 8; position++)
     {
       uint8_t mask = 0x1 << position;
- 
-      //SetLed(buttons & mask ? 1 : 0, position);
+
       StartGame(buttons);
     }
 
@@ -522,8 +548,6 @@ void loop() {
     for(uint8_t position = 0; position < 8; position++)
     {
       uint8_t mask = 0x1 << position;
- 
-      //SetLed(buttons & mask ? 1 : 0, position);
 
       MovePlayer(buttons);
       DrawPlayer();
@@ -542,10 +566,7 @@ void loop() {
   
       DrawFrame();
 
-      
-
       tick = 0;
     }
-    //delay(10);
   }
 }
