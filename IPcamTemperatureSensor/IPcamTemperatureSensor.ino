@@ -5,7 +5,7 @@ This is a sketch for ESP8266.
 It will read temperature info from DHT22 module and display it in a HikVision IP camera feed.
 
 When powered, it will try to connect to WiFi access point stored in the ESP's memory. When connected, it will start to send
-data to a camera, the adress of which is also stored in the ESP's memory. If it can't connect to WiFi (you have powered it for the first time or some error occured),
+data to a camera, the address of which is also stored in the ESP's memory. If it can't connect to WiFi (you have powered it for the first time or some error occured),
 it will create its own access point, so you can configure it on 192.168.1.111 page.
 
 The first temperature update will happen after the update frequency time passes (1 minute default).
