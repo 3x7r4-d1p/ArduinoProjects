@@ -20,7 +20,7 @@ press the S8 button to go down.
 The goal is to dodge the squares and score as many points as you can. The squares' speed will increase after a certain amount of points.
 Your score is displayed in binary during the game and shown after the "GAME OVER" message.
 
-The game will restart itself if arduino's RST pin is connected to D4 pin. If it's not not, you will need to either connect them or reset the arduino.
+The game will restart itself if arduino's RST pin is connected to D4 pin. If it's not, you will need to either connect them or reset the arduino.
 
 */
 
