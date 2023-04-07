@@ -6,8 +6,9 @@ Setup:
 Connect VCC pin to 5v pin
 Connect GND pin to GND pin
 Connect STB pin to D7 pin
-Connect CLK pin to D9 pin
 Connect DIO pin to D8 pin
+Connect CLK pin to D9 pin
+
 
 Connect arduino's RST pin to D4 pin. (you need to do this after uploading the sketch, otherwise there will be an error during uploading).
 
