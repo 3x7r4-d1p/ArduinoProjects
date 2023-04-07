@@ -3,7 +3,7 @@
 This is a simple game that utilizes a TM1638 "Led&Key" module.
 
 Setup:
-Connect VCC pin to 3.3v pin
+Connect VCC pin to 5v pin
 Connect GND pin to GND pin
 Connect STB pin to D7 pin
 Connect CLK pin to D9 pin
