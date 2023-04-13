@@ -3,11 +3,11 @@
 This is a simple game that utilizes a TM1638 "Led&Key" module.
 
 Setup:
-Connect VCC pin to 5v pin
+Connect VCC pin to 3.3v pin
 Connect GND pin to GND pin
 Connect STB pin to D7 pin
-Connect CLK pin to D8 pin
-Connect DIO pin to D9 pin
+Connect CLK pin to D9 pin
+Connect DIO pin to D8 pin
 
 
 Connect arduino's RST pin to D4 pin. (you need to do this after uploading the sketch, otherwise there will be an error during uploading).
@@ -36,8 +36,8 @@ The game will restart itself if arduino's RST pin is connected to D4 pin. If it'
 
 
 const int strobe = 7;
-const int clock = 8;
-const int data = 9;
+const int clock = 9;
+const int data = 8;
 const int reset = 4;
 
 char playerPosition;
